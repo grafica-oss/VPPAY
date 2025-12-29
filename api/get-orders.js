@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
     const SHOP_NAME = "gadaletadigital.myshopify.com";
-    const TOKEN = "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";
+    const TOKEN = "";
     const TAG_FILTRO = "vppay";
 
     const url = `https://${SHOP_NAME}/admin/api/2024-01/orders.json?tag=${TAG_FILTRO}&status=any&limit=50`;
@@ -22,4 +22,5 @@ export default async function handler(req, res) {
     } catch (error) {
         res.status(500).json({ error: "Errore nel recupero dati" });
     }
+
 }
